@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/taskflow',
+  assetPrefix: '/taskflow',
   images: {
     unoptimized: true
   }
