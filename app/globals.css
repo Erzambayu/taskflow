@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #8b5cf6;
+  --secondary-dark: #7c3aed;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --light: #f8fafc;
+  --dark: #1e293b;
+  --gray: #64748b;
+  --gray-light: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --secondary: #a78bfa;
+  --secondary-dark: #8b5cf6;
+  --light: #1e293b;
+  --dark: #f8fafc;
+  --gray: #94a3b8;
+  --gray-light: #334155;
+}
+
+@layer base {
+  * {
+    border-color: #e5e7eb;
+  }
+  
+  .dark * {
+    border-color: #374151;
+  }
+  
+  body {
+    background-color: #f9fafb;
+    color: #111827;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  .dark body {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .dark .glass {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium py-2.5 px-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-102 active:scale-98 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-medium py-2.5 px-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-102 active:scale-98 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .dark .btn-secondary {
+    border-color: #374151;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+    border: 1px solid #f3f4f6;
+  }
+  
+  .dark .card {
+    border-color: #374151;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 rounded-xl bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-all duration-300;
+    border: 2px solid #e5e7eb;
+  }
+  
+  .dark .input {
+    border-color: #374151;
+  }
+  
+  .skeleton {
+    @apply animate-pulse rounded;
+    background-color: #e5e7eb;
+  }
+  
+  .dark .skeleton {
+    background-color: #374151;
+  }
+}

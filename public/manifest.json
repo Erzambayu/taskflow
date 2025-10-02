@@ -1,0 +1,21 @@
+{
+  "name": "TaskFlow",
+  "short_name": "TaskFlow",
+  "description": "Kelola tugas Anda dengan mudah dan efisien",
+  "start_url": "/taskflow/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d47a1",
+  "icons": [
+    {
+      "src": "/taskflow/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/taskflow/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
